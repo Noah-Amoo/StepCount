@@ -13,7 +13,8 @@ const RingProgress = ({
     radius = 100, 
     strokeWith = 30}
     : RingProgressProp) => {
-    const innerCircle = radius - strokeWith/2;
+    const innerRadius = radius - strokeWith/2;
+    const circumference = 2 * Math.PI * innerRadius
 
     return (
         <View style={{ 
@@ -23,23 +24,25 @@ const RingProgress = ({
             // backgroundColor: 'green',
         }}>
         <Svg>
+            {/* Background */}
             <Circle 
             cx={radius} 
             cy={radius} 
-            r={innerCircle} 
+            r={innerRadius} 
             // fill={'blue'}  
             strokeWidth={strokeWith} 
             stroke={color} 
             opacity={0.3}
             />
+            {/* Foreground */}
             <Circle 
             cx={radius} 
             cy={radius} 
-            r={innerCircle} 
+            r={innerRadius} 
             // fill={'blue'}  
             strokeWidth={strokeWith} 
             stroke={color} 
-            // opacity={0.3}
+            strokeDasharray={[circumference * 0.5, circumference]}
             />
         </Svg>
     </View>
