@@ -1,13 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
+const Value = () => {
+  return (
+    <View style={styles.valueContainer}>
+      <Text style={styles.label}>Steps</Text>
+      <Text style={styles.value}>1219</Text>
+    </View>
+  );
+}
 export default function App() {
   return (
     <View style={styles.container}>
       <Text>Hello Counter</Text>
 
       <View style={{flexDirection: 'row'}}>  
-        <View style={styles.valueContainer}>
+        {/* <View style={styles.valueContainer}>
           <Text style={styles.label}>Steps</Text>
           <Text style={styles.value}>1219</Text>
         </View>
@@ -15,13 +23,16 @@ export default function App() {
         <View style={styles.valueContainer}>
           <Text style={styles.label}>Distance</Text>
           <Text style={styles.value}>8.75 km</Text>
-        </View>
+        </View> */}
+        <Value />
+        <Value />
       </View>
 
-      <View style={styles.valueContainer}>
+      {/* <View style={styles.valueContainer}>
         <Text style={styles.label}>Flights Climbed</Text>
         <Text style={styles.value}>0.75 km</Text>
-      </View>
+      </View> */}
+      <Value />
 
       <StatusBar style="auto" />
     </View>
