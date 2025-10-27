@@ -11,7 +11,7 @@ const color = "#EE0F55"
 
 const RingProgress = ({
     radius = 100, 
-    strokeWith = 20}
+    strokeWith = 30}
     : RingProgressProp) => {
     const innerCircle = radius - strokeWith/2;
 
@@ -29,7 +29,18 @@ const RingProgress = ({
             r={innerCircle} 
             // fill={'blue'}  
             strokeWidth={strokeWith} 
-            stroke={color} />
+            stroke={color} 
+            opacity={0.3}
+            />
+            <Circle 
+            cx={radius} 
+            cy={radius} 
+            r={innerCircle} 
+            // fill={'blue'}  
+            strokeWidth={strokeWith} 
+            stroke={color} 
+            // opacity={0.3}
+            />
         </Svg>
     </View>
   )
