@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-const Value = () => {
+const Value = ({label, value}) => {
   return (
     <View style={styles.valueContainer}>
-      <Text style={styles.label}>Steps</Text>
-      <Text style={styles.value}>1219</Text>
+      <Text style={styles.label}>{label}</Text>
+      <Text style={styles.value}>{value}</Text>
     </View>
   );
 }
@@ -24,15 +24,15 @@ export default function App() {
           <Text style={styles.label}>Distance</Text>
           <Text style={styles.value}>8.75 km</Text>
         </View> */}
-        <Value />
-        <Value />
+        <Value label = "Steps" value = "1219" />
+        <Value label = "Distance" value = "0.75 km" />
       </View>
 
       {/* <View style={styles.valueContainer}>
         <Text style={styles.label}>Flights Climbed</Text>
         <Text style={styles.value}>0.75 km</Text>
       </View> */}
-      <Value />
+      <Value label = "Flights Climbed" value = "12" />
 
       <StatusBar style="auto" />
     </View>
