@@ -36,14 +36,17 @@ const RingProgress = ({
             />
             {/* Foreground */}
             <Circle 
+            r={innerRadius} 
             cx={radius} 
             cy={radius} 
-            r={innerRadius} 
+            originX={radius}
+            originY={radius}
             // fill={'blue'}  
             strokeWidth={strokeWidth} 
             stroke={color} 
-            strokeDasharray={[circumference * 0.5, circumference]}
+            strokeDasharray={[circumference * 0.2, circumference]}
             strokeLinecap='round'
+            rotation="-90"
             />
         </Svg>
     </View>
