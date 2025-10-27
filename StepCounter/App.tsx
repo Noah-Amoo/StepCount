@@ -4,23 +4,23 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello Noah</Text>
+      <Text>Hello Counter</Text>
 
       <View style={{flexDirection: 'row'}}>  
-        <View>
-          <Text>Steps</Text>
-          <Text>1219</Text>
+        <View style={styles.valueContainer}>
+          <Text style={styles.label}>Steps</Text>
+          <Text style={styles.value}>1219</Text>
         </View>
 
-        <View>
-          <Text>Distance</Text>
-          <Text>8.75 km</Text>
+        <View style={styles.valueContainer}>
+          <Text style={styles.label}>Distance</Text>
+          <Text style={styles.value}>8.75 km</Text>
         </View>
       </View>
 
-      <View>
-        <Text>Flights Climbed</Text>
-        <Text>0.75 km</Text>
+      <View style={styles.valueContainer}>
+        <Text style={styles.label}>Flights Climbed</Text>
+        <Text style={styles.value}>0.75 km</Text>
       </View>
 
       <StatusBar style="auto" />
@@ -31,8 +31,21 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'black',
     justifyContent: 'center',
     padding: 12,
+  },
+  valueContainer: {
+    marginRight: 50,
+    marginVertical: 10,
+  },
+  label: {
+    color: 'white',
+    fontSize: 20,
+  },
+  value: {
+    fontSize: 35,
+    color: '#AFB3BE',
+    fontWeight: '500',
   },
 });
